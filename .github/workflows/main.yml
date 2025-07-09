@@ -1,4 +1,5 @@
 name: main
+
 on:
   push:
     branches: [ "main" ]
@@ -40,6 +41,11 @@ jobs:
         with:
           node-version: '16'
           cache: 'npm'
+
+      - name: Fail on critical severity (simulation)
+        run: |
+          echo "❌ Vulnérabilité critique détectée (simulation)"
+          exit 1
 
   deploy:
     needs: security
