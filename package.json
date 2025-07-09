@@ -25,5 +25,13 @@
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+  "collectCoverage": true,
+  "coverageReporters": ["lcov"],
+  "testEnvironment": "node"
 }
+
+}
+
+
